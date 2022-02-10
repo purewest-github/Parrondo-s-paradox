@@ -20,7 +20,8 @@ def game_a():
 def game_b():
     challenge = random.randint(1, 100)
     global pay
-    if (pay % 3 ==0 and challenge == 100) or (pay % 3 !=0 and challenge <= 85):
+    if (pay % 3 ==0 and challenge == 100)\
+        or (pay % 3 !=0 and challenge <= 85):
         pay += 1           
     else:
         pay -= 1
@@ -43,8 +44,11 @@ def play():
             break
         else:
             global counter
+            # ゲームAの場合はコメントを外す
             game_a()
+            # ゲームBの場合はコメントを外す
             # game_b()
+            # ゲームCの場合はコメントを外す
             # game_c()
             print("\r{0}       {1}".format(counter, pay), end="")
             time.sleep(0.001)
